@@ -89,11 +89,9 @@ footer {
 
 #reset{
   position: fixed !important;
+  right: 10px;
   bottom: 0;
-  font-size: 12px;
+  font-size: 8px;
   cursor: pointer;
   opacity:  0;
-}
-#reset:hover{
-  text-decoration: underline;
 }

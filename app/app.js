@@ -69,7 +69,7 @@ App.fn.renderAge = function(){
   var duration  = now - this.dob;
   var years     = duration / 31556900000;
 
-  var majorMinor = years.toFixed(9).toString().split('.');
+  var majorMinor = years.toFixed(8).toString().split('.');
 
   requestAnimationFrame(function(){
     this.html(this.view('age')({

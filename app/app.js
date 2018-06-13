@@ -65,11 +65,14 @@ App.fn.renderAgeLoop = function(){
 };
 
 App.fn.renderAge = function(){
-  var now       = new Date
-  var duration  = now - this.dob;
-  var years     = duration / 31556900000;
+  var now            = new Date
+  var milestoneAge   = 30
+  var milestoneDate  = new Date(this.dob.getFullYear() + milestoneAge, this.dob.getMonth(), this.dob.getDate());
+  console.log(this.dob)
+  var duration       = milestoneDate - now;
+  var days           = duration / 86400000;
 
-  var majorMinor = years.toFixed(8).toString().split('.');
+  var majorMinor = days.toFixed(6).toString().split('.');
 
   requestAnimationFrame(function(){
     this.html(this.view('age')({

@@ -66,7 +66,7 @@ App.fn.renderAgeLoop = function(){
 
 App.fn.renderAge = function(){
   var now            = new Date
-  var milestoneAge   = 30
+  var milestoneAge   = 31
   var milestoneDate  = new Date(this.dob.getFullYear() + milestoneAge, this.dob.getMonth(), this.dob.getDate());
   console.log(this.dob)
   var duration       = milestoneDate - now;
